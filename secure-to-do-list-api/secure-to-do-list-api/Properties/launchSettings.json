@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "secure_to_do_list_api": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7171",
+      "launchBrowser": false
+    }
+  }
+}

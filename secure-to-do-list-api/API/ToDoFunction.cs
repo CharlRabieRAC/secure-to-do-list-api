@@ -1,15 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using secure_to_do_list_api.Models;
 using secure_to_do_list_api.Queries;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace secure_to_do_list_api.API
 {
@@ -21,15 +19,17 @@ namespace secure_to_do_list_api.API
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
-            ToDoList responseMessage = null;
+            List<ToDoItem> responseMessage = null;
             switch (req.Method)
             {
                 case "GET":
                     responseMessage = new GetToDoList().Handle("");
                     break;
+
                 case "POST":
                     throw new NotImplementedException();
                     break;
+
                 default:
                     throw new NotImplementedException();
                     break;

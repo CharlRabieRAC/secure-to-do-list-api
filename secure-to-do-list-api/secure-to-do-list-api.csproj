@@ -5,6 +5,7 @@
     <RootNamespace>secure_to_do_list_api</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="LiteDB" Version="5.0.16" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.1.1" />
   </ItemGroup>
   <ItemGroup>
